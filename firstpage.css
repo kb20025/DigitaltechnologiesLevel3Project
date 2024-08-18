@@ -3,11 +3,11 @@
 padding: 0;
 box-sizing: 0;
 font-family: 'Open Sans', sans-serif;
-
 }
 
 body{
     height: 100vh;
     background-color: azure;
-    background-image: url(https://img.lovepik.com/bg/20240427/Explore-the-Immersive-3D-World-of-Tech-Inspired-Landscape-Cubes_7716739_wh860.jpg!/fw/860);
+    background-image: url(https://static.vecteezy.com/system/resources/previews/018/908/331/large_2x/beautiful-blue-and-purple-mixed-color-liquify-background-free-photo.jpg);
+    background-size: cover;
 }
