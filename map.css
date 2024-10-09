@@ -1,0 +1,227 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    margin-top: 80px; 
+  }
+  
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    height: 80px; 
+  }
+  
+  .logo a {
+    text-decoration: none;
+    font-size: 30px; 
+    font-weight: bold;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+  
+  .logo a:hover {
+    color: #007bff;
+  }
+  
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 40px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    font-size: 20px; 
+    color: #000; 
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #000; 
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .nav-links li a:hover {
+    color: #007bff;
+  }
+  
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+
+  .nav-links li a:hover::before {
+    transform: scale(1.2);
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      background-color: #fff;
+      width: 100%;
+      height: calc(100vh - 80px);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-links li {
+      margin: 20px 0;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    
+    .hamburger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .hamburger.active .line:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  
+    
+    .nav-links.active {
+      display: flex;
+    }
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  /* Title Section Styling */
+.title-section {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    height: calc(100vh - 60px); /* Adjust height to account for navbar */
+    margin-top: 60px; /* Space below the fixed navbar */
+    position: relative; /* Required for absolute positioning */
+    overflow: hidden; /* Hide overflow to keep the layout clean */
+    background-color: #f8f9fa; /* Light background for contrast */
+}
+
+/* Image Container */
+.image-container {
+    position: absolute; /* Overlap with title */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position */
+    opacity: 0.5; /* Slightly transparent for a professional look */
+    max-width: 50%; /* Adjust maximum width as needed */
+    z-index: 1; /* Place image below the title */
+}
+
+.image-container img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners for elegance */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Title Styling */
+.title-section h1 {
+    font-size: 3em;
+    color: black;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    position: relative; /* Allow layering above the image */
+    z-index: 2; /* Place title above the image */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 1s forwards; /* Animation */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Fade in to fully visible */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title-section h1 {
+        font-size: 2.5em; /* Slightly smaller on mobile */
+    }
+
+    .image-container {
+        max-width: 80%; /* Allow for more space on smaller screens */
+    }
+}
+
+/* Link Styles */
+.title-section a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set link color */
+}
+
+.title-section a:hover {
+    color: #007bff; /* Change color on hover */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}

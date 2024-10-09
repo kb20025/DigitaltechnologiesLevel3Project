@@ -1,0 +1,216 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    margin-top: 80px; 
+  }
+  
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    height: 80px; 
+  }
+  
+  .logo a {
+    text-decoration: none;
+    font-size: 30px; 
+    font-weight: bold;
+    color: #000;
+    transition: color 0.3s ease;
+  }
+  
+  .logo a:hover {
+    color: #007bff;
+  }
+  
+
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 40px;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    font-size: 20px; 
+    color: #000; 
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #000; 
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-links li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  .nav-links li a:hover {
+    color: #007bff;
+  }
+  
+
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+
+  .nav-links li a:hover::before {
+    transform: scale(1.2);
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      background-color: #fff;
+      width: 100%;
+      height: calc(100vh - 80px);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-links li {
+      margin: 20px 0;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+  
+    
+    .hamburger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .hamburger.active .line:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  
+    
+    .nav-links.active {
+      display: flex;
+    }
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; /* White background */
+}
+
+.menu-bar {
+    background-color: #000000; /* Black menu bar */
+    color: #ffffff; /* White text */
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.content {
+    text-align: center;
+    margin-top: 50px; /* Space below the menu bar */
+}
+
+.big-title {
+    font-size: 48px; /* Big title size */
+    color: #007bff; /* Blue color for the title */
+    margin-bottom: 20px; /* Space below the big title */
+    font-weight: bold; /* Make it bold */
+}
+
+.contact-title {
+    font-size: 32px; /* Size for the contact title */
+    color: #000000; /* Black color for contact title */
+    margin-bottom: 20px; /* Space below the contact title */
+    font-weight: 600; /* Slightly bold */
+}
+
+.contact-info {
+    background-color: #f1f1f1; /* Light grey background for contact info */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    display: inline-block; /* Center the contact info box */
+}
+
+p {
+    font-size: 18px; /* Regular paragraph size */
+    color: #333333; /* Dark grey color for text */
+    margin: 10px 0; /* Space between paragraphs */
+}
+
+a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none; /* No underline */
+    font-weight: 500; /* Medium weight for links */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+ 
