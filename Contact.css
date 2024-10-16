@@ -1,676 +1,81 @@
-
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff; 
+/* Contact Section */
+.contact-section {
+  background-color: #0d1b2a;
+  padding: 60px 20px;
+  text-align: center;
 }
 
-.menu-bar {
-    background-color: #000000; 
-    color: #ffffff; 
-    padding: 15px 20px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-}
-
-.content {
-    text-align: center;
-    margin-top: 50px; 
-}
-
-.big-title {
-    font-size: 48px; 
-    color: #007bff; 
-    margin-bottom: 20px; 
-    font-weight: bold; 
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .contact-title {
-    font-size: 32px; 
-    color: #000000; 
-    margin-bottom: 20px; 
-    font-weight: 600; 
-}
-
-.contact-info {
-    background-color: #f1f1f1; 
-    padding: 20px;
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    display: inline-block; 
-}
-
-.p {
-    font-size: 18px; 
-    color: #333333; 
-    margin: 10px 0; 
-}
-
-a {
-    color: #007bff; 
-    text-decoration: none; 
-    font-weight: 500; 
-}
-
-a:hover {
-    text-decoration: underline; 
-}
-
-
-body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-  color: #333;
-}
-
-
-.about-header {
-  text-align: center;
-  padding: 50px;
-  background-color: #4a90e2;
-  color: white;
-  margin-top: 100px; 
-}
-
-.about-header h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-  animation: fadeInDown 1s ease-out;
-}
-
-.about-header p {
-  font-size: 1.2em;
-  animation: fadeInDown 2s ease-out;
-}
-
-/* About Section */
-.about-section, .mission-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px;
-  background-color: #fff;
-  margin: 30px 0;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-}
-
-.about-content, .mission-content {
-  width: 50%;
-  padding: 20px;
-}
-
-.about-image img, .mission-image img {
-  width: 90%;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Contact Section */
-.contact-section {
-  text-align: center;
-  padding: 50px;
-  background-color: #fff;
-  margin: 30px 0;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-}
-
-.contact-section h2 {
-  font-size: 2.5em;
+  font-size: 3rem;
+  color: #5bc0be;
   margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-.contact-section p {
-  font-size: 1.2em;
+.mission-statement {
+  font-size: 1.2rem;
+  color: #c5c6c7;
+  margin-bottom: 40px;
 }
 
-
-@keyframes fadeInDown {
-  0% {
-      opacity: 0;
-      transform: translateY(-20px);
-  }
-  100% {
-      opacity: 1;
-      transform: translateY(0);
-  }
+.get-in-touch {
+  font-size: 2rem;
+  color: #e0e1dd;
+  margin-top: 40px;
+  animation: fadeIn 1s ease-in-out;
 }
 
-@keyframes fadeIn {
-  0% {
-      opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  0% {
-      opacity: 0;
-      transform: translateX(-100%);
-  }
-  100% {
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  0% {
-      opacity: 0;
-      transform: translateX(100%);
-  }
-  100% {
-      opacity: 1;
-      transform: translateX(0);
-  }
-}
-
-@keyframes zoomIn {
-  0% {
-      opacity: 0;
-      transform: scale(0.8);
-  }
-  100% {
-      opacity: 1;
-      transform: scale(1);
-  }
-
-/* General Body Styling */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-  color: #333;
-  overflow-x: hidden;
-}
-
-
-
-* .about-header h1 {
-  font-size: 4em;
-  margin-bottom: 10px;
-  animation: moveInTop 1.2s ease-out;
-  letter-spacing: 2px;
-}
-
-.about-header p {
-  font-size: 1.4em;
-  animation: fadeIn 2s ease-in;
-}
-
-.about-header::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent);
-  z-index: -1;
-  transform: translateY(-50%);
-  animation: slideDiagonal 2.5s ease-out forwards;
-}
-
-/* About Section */
-.about-section, .mission-section {
+.contact-form {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 50px;
-  background-color: #fff;
-  margin: 50px 0;
-  border-radius: 20px;
-  position: relative;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  gap: 15px;
 }
 
-.about-content, .mission-content {
-  width: 45%;
-  animation: slideInLeft 1.5s ease-out;
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 1px solid #5bc0be;
+  border-radius: 5px;
+  background-color: #1b263b;
+  color: #e0e1dd;
+  transition: border-color 0.3s ease;
 }
 
-.about-image img, .mission-image img {
-  width: 90%;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(1);
-  animation: zoomInImage 2s ease-in-out;
-  transition: transform 0.6s ease;
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3a506b;
+  outline: none;
 }
 
-.about-image img:hover, .mission-image img:hover {
-  transform: scale(1.1);
+.contact-form button {
+  padding: 12px;
+  background-color: #3a506b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-/* Contact Section */
-.contact-section {
-  text-align: center;
-  padding: 60px;
-  background-color: #fff;
-  margin: 40px 0;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-}
+.contact-form button:hover {
+  background-color: #5bc0be;
 
-.contact-section h2 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.contact-section p {
-  font-size: 1.2em;
-  color: #555;
 }
 
 /* Animations */
 @keyframes fadeIn {
   0% {
       opacity: 0;
-  }
-  100% {
-      opacity: 1;
-  }
-}
-
-@keyframes moveInTop {
-  0% {
-      transform: translateY(-100px);
-      opacity: 0;
-  }
-  100% {
-      transform: translateY(0);
-      opacity: 1;
-  }
-}
-
-@keyframes slideInLeft {
-  0% {
-      transform: translateX(-100%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
-}
-
-@keyframes zoomInImage {
-  0% {
-      transform: scale(0.8);
-      opacity: 0;
-  }
-  100% {
-      transform: scale(1);
-      opacity: 1;
-  }
-}
-
-@keyframes slideDiagonal {
-  0% {
-      transform: translateY(-50%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateY(0);
-      opacity: 1;
-  }
-}
-
-@keyframes fadeInBackground {
-  0% {
-      background-color: #fff;
-  }
-  100% {
-      background-color: #f0f0f0;
-  }
-}
-
-/* Animation on scroll */
-.animate-on-scroll {
-  animation: fadeInBackground 2s ease-in-out;
-}
-
-/* Adding Parallax Effect */
-.about-section::before, .mission-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -100px;
-  right: -100px;
-  z-index: -1;
-  background: radial-gradient(circle at center, rgba(74, 144, 226, 0.1), transparent 70%);
-  animation: parallaxMove 6s infinite linear;
-}
-
-@keyframes parallaxMove {
-  0% {
-      transform: translateY(0px);
-  }
-  100% {
       transform: translateY(20px);
   }
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .about-section, .mission-section {
-      flex-direction: column;
-      padding: 30px;
-  }
-
-  .about-content, .mission-content {
-      width: 100%;
-      text-align: center;
-      animation: fadeIn 1.5s ease-out;
-  }
-
-  .about-image img, .mission-image img {
-      width: 100%;
-  }
-}
-
-/* General Body Styling */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-  color: #333;
-  overflow-x: hidden;
-}
-
-/* Header Section */
-.about-header {
-  text-align: center;
-  padding: 80px 20px;
-  background-color: #4a90e2;
-  color: white;
-  margin-top: 100px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.about-header h1 {
-  font-size: 4em;
-  margin-bottom: 10px;
-  animation: moveInTop 1.2s ease-out;
-  letter-spacing: 2px;
-}
-
-.about-header p {
-  font-size: 1.4em;
-  animation: fadeIn 2s ease-in;
-}
-
-.about-header::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent);
-  z-index: -1;
-  transform: translateY(-50%);
-  animation: slideDiagonal 2.5s ease-out forwards;
-}
-
-/* About Section */
-.about-section, .mission-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 50px;
-  background-color: #fff;
-  margin: 50px 0;
-  border-radius: 20px;
-  position: relative;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
-  overflow: hidden;
-}
-
-/* Animation Effect on Hover */
-.about-section:hover, .mission-section:hover {
-  box-shadow: 0px 20px 60px rgba(74, 144, 226, 0.4);
-}
-
-.about-section:hover::before, .mission-section:hover::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 2px solid transparent;
-  background: linear-gradient(90deg, rgba(74, 144, 226, 0.2), rgba(255, 255, 255, 0));
-  animation: hoverEffect 1.5s infinite ease-in-out;
-  z-index: 1;
-  pointer-events: none;
-}
-
-@keyframes hoverEffect {
-  0% {
-      transform: scale(1);
-      opacity: 1;
-  }
-  50% {
-      transform: scale(1.05);
-      opacity: 0.5;
-  }
-  100% {
-      transform: scale(1);
-      opacity: 1;
-  }
-}
-
-.about-content, .mission-content {
-  width: 45%;
-  animation: slideInLeft 1.5s ease-out;
-}
-
-.about-image img, .mission-image img {
-  width: 90%;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
-  transform: scale(1);
-  animation: zoomInImage 2s ease-in-out;
-  transition: transform 0.6s ease;
-}
-
-.about-image img:hover, .mission-image img:hover {
-  transform: scale(1.1);
-}
-
-/* Contact Section */
-.contact-section {
-  text-align: center;
-  padding: 60px;
-  background-color: #fff;
-  margin: 40px 0;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 15px;
-}
-
-.contact-section h2 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.contact-section p {
-  font-size: 1.2em;
-  color: #555;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  0% {
-      opacity: 0;
-  }
   100% {
       opacity: 1;
-  }
-}
-
-@keyframes moveInTop {
-  0% {
-      transform: translateY(-100px);
-      opacity: 0;
-  }
-  100% {
       transform: translateY(0);
-      opacity: 1;
   }
-}
-
-@keyframes slideInLeft {
-  0% {
-      transform: translateX(-100%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateX(0);
-      opacity: 1;
-  }
-}
-
-@keyframes zoomInImage {
-  0% {
-      transform: scale(0.8);
-      opacity: 0;
-  }
-  100% {
-      transform: scale(1);
-      opacity: 1;
-  }
-}
-
-@keyframes slideDiagonal {
-  0% {
-      transform: translateY(-50%);
-      opacity: 0;
-  }
-  100% {
-      transform: translateY(0);
-      opacity: 1;
-  }
-}
-
-@keyframes fadeInBackground {
-  0% {
-      background-color: #fff;
-  }
-  100% {
-      background-color: #f0f0f0;
-  }
-}
-
-/* Adding Parallax Effect */
-.about-section::before, .mission-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -100px;
-  right: -100px;
-  z-index: -1;
-  background: radial-gradient(circle at center, rgba(74, 144, 226, 0.1), transparent 70%);
-  animation: parallaxMove 6s infinite linear;
-}
-
-@keyframes parallaxMove {
-  0% {
-      transform: translateY(0px);
-  }
-  100% {
-      transform: translateY(20px);
-  }
-}
-
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .about-section, .mission-section {
-      flex-direction: column;
-      padding: 30px;
-  }
-
-  .about-content, .mission-content {
-      width: 100%;
-      text-align: center;
-      animation: fadeIn 1.5s ease-out;
-  }
-
-  .about-image img, .mission-image img {
-      width: 100%;
-  }
-}
-/* General Body Styling */
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f0f0f0;
-  color: #333;
-  overflow-x: hidden;
-}
-
-/* Header Section */
-.about-header {
-  text-align: center;
-  padding: 80px 20px;
-  background-color: #4a90e2;
-  color: white;
-  margin-top: 100px;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.about-header h1 {
-  font-size: 4em;
-  margin-bottom: 10px;
-  animation: moveInTop 1.2s ease-out;
-  letter-spacing: 2px;
-}
-
-.about-header p {
-  font-size: 1.4em;
-  animation: fadeIn 2s ease-in;
-}
-
-.about-header::before {
-  content: '';
-  position: absolute;
-  top: -50px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.2), transparent);
-  z-index: -1;
-  transform: translateY(-50%);
-  animation: slideDiagonal 2.5s ease-out forwards;
 }
 

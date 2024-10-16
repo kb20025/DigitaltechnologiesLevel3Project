@@ -1,7 +1,11 @@
-// JavaScript to toggle the hamburger menu on mobile view
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+document.addEventListener("DOMContentLoaded", function () {
+  const ctaBtn = document.querySelector('.cta-btn');
+  
+  ctaBtn.addEventListener('mouseover', () => {
+    ctaBtn.classList.add('pulse');
+  });
+  
+  ctaBtn.addEventListener('mouseout', () => {
+    ctaBtn.classList.remove('pulse');
+  });
 });

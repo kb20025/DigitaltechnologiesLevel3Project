@@ -1,86 +1,79 @@
-<!-- Taskbar -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enhanced Menu Bar</title>
+  <title>KB IH Website</title>
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
- 
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="logo">
-      <a href="index.html">KB IH Website</a>
+      <a href="index.html">KB IH</a>
     </div>
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
       <li><a href="quiz.html">Quiz</a></li>
       <li><a href="Flashcards.html">Flashcards</a></li>
-      <li><a href="Contact.html">Contact us</a></li>
+      <li><a href="Contact.html">Contact</a></li>
     </ul>
     <div class="hamburger">
       <div class="line"></div>
       <div class="line"></div>
       <div class="line"></div>
-
-      <div class="logo-container">
-        <img src="logo.png" alt="Logo" class="logo">
     </div>
   </nav>
 
-</body>
-</html>
+
+
+
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
     <link rel="stylesheet" href="Contact.css">
+    <title>Contact Us | KB IH Tech</title>
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="about-header">
-        <h1>About Us</h1>
-        <p>Thanks for checking my website out! i hope you liked it and please feel free to contact down bellow if </p>
-    </header>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KB IH Website</title>
+    <link rel="stylesheet" href="index.css">
+    
+   
+  </head>
+ 
 
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="about-content">
-            <h2 class="animate-slide-left">Our Vision</h2>
-            <p class="animate-fade-in">
-                We envision a world where technology and creativity converge to build impactful solutions that enhance lives.
-            </p>
-        </div>
-        <div class="about-image">
-            <img src="Spider-Web-Vision.webp" alt="Vision Image" class="animate-image">
-        </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="mission-section">
-        <div class="about-content">
-            <h2 class="animate-slide-right">Our Mission</h2>
-            <p class="animate-fade-in">
-              As an 18-year-old student with a deep passion for global topics, I’ve come to realize that understanding the history of the world is not just important—it's essential for the future. I believe that New Zealand, like many other nations, stands to benefit immensely from a greater awareness of global history. Without this knowledge, we risk repeating the same mistakes that have shaped past conflicts, struggles, and failures. History teaches us critical lessons about governance, diplomacy, and human rights, and by embracing it, we can build a more informed and resilient future for our country.
-            </p>
-        </div>
-        <div class="about-image">
-            <img src="our-mission (1).png" alt="Mission Image" class="animate-image">
-        </div>
-    </section>
-
-    <!-- Contact Us Section -->
     <section class="contact-section">
-        <div class="contact-text">
-            <h2 class="animate-zoom-in">Contact Us</h2>
-            <p class="animate-fade-in">For any inquiries, feel free to <a href="Contact.html">reach out to us</a>.</p>
+        <div class="contact-content">
+            <h1 class="contact-title">Contact Us</h1>
+            <p class="mission-statement">At KB IH Tech, our mission is to transform the way students engage with history and geography through innovative technology and interactive learning experiences. We aim to make education exciting and accessible, bridging the gap between past and present.</p>
+            
+            <h2 class="get-in-touch">Get in Touch</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
 
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('open');
+            hamburger.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
+
