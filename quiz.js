@@ -5,8 +5,7 @@ const questions = [
         answers: [
             { text: "True", correct: false },
             { text: "False", correct: true },
-            { text: "Both", correct: false },
-            { text: "None", correct: false },
+            
         ]
     },
     {
@@ -14,8 +13,7 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            { text: "Depends on the definition", correct: false },
-            { text: "Only in summer", correct: false },
+            
         ]
     },
     {
@@ -23,8 +21,7 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            { text: "They were the first in Africa", correct: false },
-            { text: "They were nomads", correct: false },
+            
         ]
     },
     {
@@ -32,8 +29,8 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            { text: "Only in the past", correct: false },
-            { text: "Due to its size", correct: false },
+            
+            
         ],
     },
     {
@@ -41,8 +38,7 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            { text: "It's a state", correct: false },
-            { text: "Only during elections", correct: false },
+            
         ]
     },
     {
@@ -50,8 +46,7 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            { text: "They're in Africa", correct: false },
-            { text: "They don't exist", correct: false },
+            
         ]
     },
     {
@@ -59,8 +54,7 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            { text: "Only during summer", correct: false },
-            { text: "It's a region", correct: false },
+            
         ]
     },
     {
@@ -68,8 +62,7 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            { text: "Only in Africa", correct: false },
-            { text: "It's man-made", correct: false },
+            
         ]
     },
     {
@@ -77,8 +70,7 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            { text: "It's the largest city", correct: false },
-            { text: "It's the most populous", correct: false },
+            
         ]
     },
     {
@@ -86,8 +78,7 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            { text: "Only in winter", correct: false },
-            { text: "It's a myth", correct: false },
+            
         ]
     },
     {
@@ -95,8 +86,7 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            { text: "Only in terms of size", correct: false },
-            { text: "Asia has more", correct: false },
+           
         ]
     },
     {
@@ -104,8 +94,7 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            { text: "It's the most polluted", correct: false },
-            { text: "Only in summer", correct: false },
+            
         ]
     }
 ];
