@@ -51,7 +51,6 @@ body {
 .nav-links li a:hover {
   color: cornflowerblue;
 }
-
 /* Flashcards Section */
 .flashcards-section {
   padding: 60px;
@@ -67,17 +66,20 @@ body {
 
 .flashcards-container {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  justify-content: flex-start; /* Align flashcards to the left */
+  flex-wrap: nowrap; /* Prevent wrapping to keep them in one row */
+  width: calc(300px * 20 + 30px * 19); /* Total width of 20 cards with gaps */
+  overflow: hidden; /* Hide any overflow */
+  gap: 30px; /* Space between flashcards */
 }
 
 /* Flashcard */
 .flashcard {
-  width: 300px;
-  height: 200px;
+  width: 300px; /* Set a fixed width for the flashcards */
+  height: 200px; /* Set a fixed height for the flashcards */
   perspective: 1000px;
   cursor: pointer;
+  position: relative; /* Add position relative for absolute children */
 }
 
 .flashcard .front, .flashcard .back {
@@ -117,14 +119,78 @@ body {
   transform: rotateY(360deg);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar .logo a, .navbar .nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0 15px;
+}
+
+.flashcard-container {
+  display: flex;
+  overflow-x: auto; /* Horizontal scroll */
+  scroll-snap-type: x mandatory;
+  padding: 20px;
+  gap: 20px;
+}
+
+.flashcard {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 200px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.flashcard .front, .flashcard .back {
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flashcard .front {
+  background-color: black;
+}
+
+.flashcard .back {
+  background-color: cornflowerblue;
+  transform: rotateY(180deg);
+}
+
+.flashcard:hover .back {
+  transform: rotateY(0);
+}
+
+.flashcard-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for better design */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-  .flashcards-container {
-    flex-direction: column;
-  }
-
   .flashcard {
-    width: 100%;
-    height: auto;
+    width: 120px;
+    height: 180px;
   }
 }

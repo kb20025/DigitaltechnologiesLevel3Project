@@ -1,11 +1,9 @@
 const questions = [
-
     {
         question: "The Sahara Desert is the largest desert in the world.",
         answers: [
             { text: "True", correct: false },
             { text: "False", correct: true },
-            
         ]
     },
     {
@@ -13,7 +11,6 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            
         ]
     },
     {
@@ -21,7 +18,6 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            
         ]
     },
     {
@@ -29,8 +25,6 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            
-            
         ],
     },
     {
@@ -38,7 +32,6 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            
         ]
     },
     {
@@ -46,7 +39,6 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            
         ]
     },
     {
@@ -54,7 +46,6 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            
         ]
     },
     {
@@ -62,7 +53,6 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            
         ]
     },
     {
@@ -70,7 +60,6 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            
         ]
     },
     {
@@ -78,7 +67,6 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            
         ]
     },
     {
@@ -86,7 +74,6 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-           
         ]
     },
     {
@@ -94,14 +81,13 @@ const questions = [
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
-            
         ]
     }
 ];
 
 const questionElement = document.getElementById("question");
-const answerButtons = document.getElementById("answer-buttons");  
-const nextButton = document.getElementById("next-btn");  
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -143,21 +129,19 @@ function selectAnswer(e) {
     const isCorrect = selectedBtn.dataset.correct === "true";
     if (isCorrect) {
         selectedBtn.classList.add("correct");
+        score++; 
     } else {
         selectedBtn.classList.add("incorrect");
     }
 
-
     nextButton.style.display = "block"; 
 }
-
 
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
         showQuestion();
     } else {
-        
         questionElement.innerHTML = `Quiz completed! Your score: ${score}/${questions.length}`;
         answerButtons.innerHTML = ''; 
         nextButton.style.display = "none"; 
