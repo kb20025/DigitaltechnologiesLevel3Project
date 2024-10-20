@@ -71,3 +71,14 @@ body{
 .incorrect{
     background: #ff9393;
 }
+
+.hero {
+    height: 100vh;
+    background-image: url(index.png); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
