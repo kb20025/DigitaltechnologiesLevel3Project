@@ -7,14 +7,28 @@ const questions = [
         ]
     },
     {
-        question: "Canada has the longest coastline of any country.",
+        question: "Africa has the most countries of any continent.",
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
         ]
     },
     {
-        question: "The Sumerians were the oldest known civilization.",
+        question: "The Sumerians were not the oldest known civilization.",
+        answers: [
+            { text: "True", correct: false},
+            { text: "False", correct: true },
+        ]
+    },
+    {
+        question: "The Ural Mountains separate Europe from Asia.",
+        answers: [
+            { text: "True", correct: true },
+            { text: "False", correct: false },
+        ]
+    },
+    {
+        question: "Canberra is the capital city of Australia.",
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
@@ -28,21 +42,21 @@ const questions = [
         ],
     },
     {
-        question: "Canberra is the capital city of Australia.",
+        question: "The Indian Ocean is the largest ocean on Earth.",
         answers: [
-            { text: "True", correct: true },
-            { text: "False", correct: false },
-        ]
-    },
-    {
-        question: "The Ural Mountains separate Europe from Asia.",
-        answers: [
-            { text: "True", correct: true },
-            { text: "False", correct: false },
+            { text: "True", correct: false},
+            { text: "False", correct: true},
         ]
     },
     {
         question: "Vatican City is the smallest country in the world.",
+        answers: [
+            { text: "True", correct: true },
+            { text: "False", correct: false },
+        ]
+    },
+    {
+        question: "Canada has the longest coastline of any country.",
         answers: [
             { text: "True", correct: true },
             { text: "False", correct: false },
@@ -56,13 +70,6 @@ const questions = [
         ]
     },
     {
-        question: "Tokyo is the capital of Japan.",
-        answers: [
-            { text: "True", correct: true },
-            { text: "False", correct: false },
-        ]
-    },
-    {
         question: "Japan is known as the Land of the Rising Sun.",
         answers: [
             { text: "True", correct: true },
@@ -70,20 +77,21 @@ const questions = [
         ]
     },
     {
-        question: "Africa has the most countries of any continent.",
+        question: "Beijing is the capital of Japan.",
         answers: [
-            { text: "True", correct: true },
-            { text: "False", correct: false },
+            { text: "True", correct: false },
+            { text: "False", correct: true },
         ]
     },
     {
-        question: "The Pacific Ocean is the largest ocean on Earth.",
+        question: "The Russian Empire was known for its road system across the land",
         answers: [
-            { text: "True", correct: true },
-            { text: "False", correct: false },
+            { text: "True", correct: false },
+            { text: "False", correct: true },
         ]
-    }
+    },
 ];
+
 
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
@@ -147,5 +155,23 @@ nextButton.addEventListener("click", () => {
         nextButton.style.display = "none"; 
     }
 });
+
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Swap elements
+    }
+}
+
+
+questions.forEach(question => {
+    shuffleArray(question.answers);
+});
+
+
+shuffleArray(questions);
+
+console.log(questions);
 
 startquiz();

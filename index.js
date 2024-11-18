@@ -14,7 +14,7 @@ const navLinks = document.querySelector('.nav-links');
 const navbar = document.querySelector('.navbar');
 
 mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active'); // Toggle the 'active' class
-    navbar.classList.toggle('open'); // Toggle the 'open' class on the navbar for styling
+    navLinks.classList.toggle('active'); 
+    navbar.classList.toggle('open'); 
 });
 
