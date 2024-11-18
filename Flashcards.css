@@ -2,61 +2,59 @@
 .flashcards-section {
   padding: 60px;
   text-align: center;
-  background-color: #fff;
+  background-color: #fff; /* Section background remains unchanged */
 }
 
 .flashcards-section h1 {
   font-size: 2.5rem;
-  color: #222;
+  color: #222; /* Heading color unchanged */
   margin-bottom: 40px;
 }
 
 /* Flashcards Container */
 .flashcards-container {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping of items */
-  justify-content: flex-start; /* Align cards to the left */
-  gap: 30px; /* Space between cards */
+  display: grid; /* Use grid layout for consistent positioning */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
   padding: 20px;
   width: 100%;
 }
 
 /* Flashcard */
 .flashcard {
-  width: calc(25% - 30px); /* Each card takes 25% of the container width minus gap */
-  height: 200px; /* Fixed height */
-  perspective: 1000px;
+  height: 200px; /* Fixed height for the cards */
+  perspective: 1000px; /* Enable 3D effect for flip */
   cursor: pointer;
   position: relative;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Card shadow unchanged */
+  overflow: hidden;
 }
 
-.flashcard .front, .flashcard .back {
+.flashcard .front,
+.flashcard .back {
   width: 100%;
   height: 100%;
-  background-color: #fff;
-  border-radius: 15px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  backface-visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform 0.6s ease;
+  backface-visibility: hidden; /* Hide back when front is visible */
+  transition: transform 0.6s ease; /* Smooth flip transition */
 }
 
 .flashcard .front {
-  background-color: #222;
-  color: #fff;
+  background-color: #222; /* Front color unchanged */
+  color: #fff; /* Front text color unchanged */
 }
 
 .flashcard .back {
-  background-color: cornflowerblue;
-  color: #222;
+  background-color: cornflowerblue; /* Back color unchanged */
+  color: #222; /* Back text color unchanged */
   transform: rotateY(180deg);
 }
 
@@ -68,14 +66,14 @@
   transform: rotateY(360deg);
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design */
 @media (max-width: 768px) {
   .flashcards-container {
-    justify-content: center; /* Center the items on smaller screens */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust grid for smaller screens */
   }
 
   .flashcard {
-    width: calc(50% - 30px); /* 2 cards per row on small screens */
     height: 180px; /* Adjust height for small screens */
   }
 }
+
