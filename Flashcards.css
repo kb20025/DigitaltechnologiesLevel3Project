@@ -11,23 +11,23 @@
   margin-bottom: 40px;
 }
 
-/* Flashcards Container */
+
 .flashcards-container {
-  display: grid; /* Use grid layout for consistent positioning */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-  gap: 20px; /* Space between cards */
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px; 
   padding: 20px;
   width: 100%;
 }
 
-/* Flashcard */
+
 .flashcard {
-  height: 200px; /* Fixed height for the cards */
-  perspective: 1000px; /* Enable 3D effect for flip */
+  height: 200px; 
+  perspective: 1000px; 
   cursor: pointer;
   position: relative;
   border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Card shadow unchanged */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
   overflow: hidden;
 }
 

@@ -135,6 +135,15 @@ function resetState() {
 function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
+
+    
+    Array.from(answerButtons.children).forEach((button) => {
+        button.disabled = true;
+        if (button.dataset.correct === "true") {
+            button.classList.add("correct"); 
+        }
+    });
+
     if (isCorrect) {
         selectedBtn.classList.add("correct");
         score++; 
@@ -142,8 +151,10 @@ function selectAnswer(e) {
         selectedBtn.classList.add("incorrect");
     }
 
-    nextButton.style.display = "block"; 
+   
+    nextButton.style.display = "block";
 }
+
 
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++;
